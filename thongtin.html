@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập Thông Tin Nhận Quà</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #84fab0, #8fd3f4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 320px;
+    }
+    h2 {
+      text-align: center;
+      color: #008080;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      background-color: #00b894;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #019875;
+    }
+  </style>
+</head>
+<body>
+  <form id="giftForm">
+    <h2>Nhập thông tin nhận quà</h2>
+    <input type="text" name="fullname" placeholder="Họ và tên" required>
+    <input type="tel" name="phone" placeholder="Số điện thoại" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <label for="dob">Ngày sinh:</label>
+    <input type="date" name="dob" required>
+    <input type="text" name="otp" placeholder="Mã OTP" required maxlength="6">
+    <button type="submit">Xác nhận nhận quà</button>
+  </form>
+
+  <script>
+    document.getElementById('giftForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Cảm ơn bạn! Thông tin đã được gửi.');
+    });
+  </script>
+</body>
+</html>
